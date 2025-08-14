@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Latent Conditioned Loco-Manipulation Using Motion Priors">
+  <meta name="keywords" content="CaT, Reinforcement Learning, Legged Locomotion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latent Conditioned Loco-Manipulation Using Motion Priors</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/laasicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Latent Conditioned Loco-Manipulation Using Motion Priors</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://macstepien.github.io/">Maciej Stępień</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/rkourdis/">Rafael Kourdis</a><sup>1,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://constantroux.github.io/">Constant Roux</a><sup>1</sup>,
+            </span> </br>
+            <span class="author-block">
+              <a href="https://homepages.laas.fr/ostasse/hugo/">Olivier Stasse</a><sup>1,2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup> LAAS-CNRS,</span>
+            <span class="author-block"><sup>2</sup> Artificial and Natural Intelligence Toulouse Institute,</span>
+            <span class="author-block"><sup>3</sup> University of Edinburgh</span>
+          </div>
+
+           <!-- TODO UPDATE LINKS -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (coming soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (coming soon)</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (coming soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+          This paper has been accepted for the 2025 IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Our Solo12 loco-manipulation policy is able to execute and smoothly transition between locomotion and manipulation to reach a specified target.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Although humanoid and quadruped robots provide a wide range of capabilities, current control methods, such as Deep Reinforcement Learning, focus mainly on single skills. This approach is inefficient for solving more complicated tasks where high-level goals, physical robot limitations and desired motion style might all need to be taken into account. A more effective approach is to first train a multipurpose motion policy that acquires low-level skills through imitation, while providing latent space control over skill execution. Then, this policy can be used to efficiently solve downstream tasks. This method has already been successful for controlling characters in computer graphics. In this work, we apply the approach to humanoid and quadrupedal loco-manipulation by imitating either simple synthetic motions or kinematically retargeted dog motions. We extend the original formulation to handle constraints, ensuring deployment safety, and use a diffusion discriminator for better imitation quality. We verify our methods by performing loco-manipulation in simulation for the H1 humanoid and Solo12 quadruped, as well as deploying policies on Solo12 hardware.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+     <!-- TODO -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Solo synthetic -->
+      <!-- <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Solo synthetic</h2>
+          <p>
+            Solo synthetic
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      <!--/ Solo synthetic -->
+
+      <!-- H1 synthetic -->
+      <!-- <div class="column">
+        <h2 class="title is-3">H1 synthetic</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              H1 synthetic
+            </p>
+            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div> -->
+      <!--/ H1 synthetic -->
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{mstepien2025lacoloco,
+      title={Latent Conditioned Loco-Manipulation Using Motion Priors},
+      author={Maciej Stępień and Rafael Kourdis and Constant Roux and Olivier Stasse},
+      booktitle={IEEE-RAS 24th International Conference on Humanoid Robots (Humanoids)},
+      year={2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- TODO LINK -->
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            We thank <a href="https://constraints-as-terminations.github.io/"><span class="dnerf">Constraints as Terminations</span></a> and <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> for sharing their template.
+          </p>
+          <p>
+            You are free to borrow the <a href="">source code</a> <!-- TODO LINK -->
+            of this website, we just ask that you link back to this page in the footer, as well as to
+            <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
