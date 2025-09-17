@@ -72,12 +72,12 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://hal.science/hal-05242643v1/file/LaCoLoco.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (coming soon)</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
@@ -120,11 +120,11 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/.mp4"
+      <video id="teaser" autoplay muted controls loop playsinline height="100%">
+        <source src="./static/videos/title_only.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -132,14 +132,14 @@
       </h2>
     </div>
   </div>
-</section> -->
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Although humanoid and quadruped robots provide a wide range of capabilities, current control methods, such as Deep Reinforcement Learning, focus mainly on single skills. This approach is inefficient for solving more complicated tasks where high-level goals, physical robot limitations and desired motion style might all need to be taken into account. A more effective approach is to first train a multipurpose motion policy that acquires low-level skills through imitation, while providing latent space control over skill execution. Then, this policy can be used to efficiently solve downstream tasks. This method has already been successful for controlling characters in computer graphics. In this work, we apply the approach to humanoid and quadrupedal loco-manipulation by imitating either simple synthetic motions or kinematically retargeted dog motions. We extend the original formulation to handle constraints, ensuring deployment safety, and use a diffusion discriminator for better imitation quality. We verify our methods by performing loco-manipulation in simulation for the H1 humanoid and Solo12 quadruped, as well as deploying policies on Solo12 hardware.
@@ -165,45 +165,139 @@
 
 
 <section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-full-width">  
+      <h2 class="title is-2">Results</h2>
+      <div class="content has-text-justified">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Solo synthetic -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-full-width">  
+      <h3 class="title is-3">Solo synthetic</h3>
+    </div>
+  </div>
+
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Solo synthetic -->
-      <!-- <div class="column">
+    <div class="columns is-centered">  
+      <div class="column has-text-centered">
         <div class="content">
-          <h2 class="title is-3">Solo synthetic</h2>
-          <p>
-            Solo synthetic
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/.mp4"
-                    type="video/mp4">
+          <h4 class="title is-4">Dataset</h4>
+          <video id="dollyzoom" controls muted playsinline height="100%">
+            <source src="./static/videos/solo_synthetic_sim_dataset.mp4"
+            type="video/mp4">
           </video>
         </div>
-      </div> -->
-      <!--/ Solo synthetic -->
-
-      <!-- H1 synthetic -->
-      <!-- <div class="column">
-        <h2 class="title is-3">H1 synthetic</h2>
+      </div>
+      
+      <div class="column has-text-centered">
+        <h4 class="title is-4">Methods comparison</h4>
         <div class="columns is-centered">
           <div class="column content">
-            <p>
-              H1 synthetic
-            </p>
-            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/.mp4"
-                      type="video/mp4">
+            <video id="matting-video" controls muted playsinline height="100%">
+              <source src="./static/videos/solo_synthetic_sim_comparison.mp4"
+              type="video/mp4">
             </video>
           </div>
         </div>
-      </div> -->
-      <!--/ H1 synthetic -->
-
+      </div>
     </div>
-
   </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-three-fifths has-text-centered">  
+        <h4 class="title is-4">Hardware methods comparison</h4>
+        <video id="matting-video" controls muted playsinline height="25%">
+          <source src="./static/videos/solo_synthetic_hardware.mp4"
+                type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <!--/ Solo synthetic -->
+
+  <!-- Solo dog imitation -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-full-width">  
+      <h3 class="title is-3">Solo dog imitation</h3>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">  
+      <div class="column has-text-centered">
+        <div class="content">
+          <h4 class="title is-4">Dataset</h4>
+          <video id="dollyzoom" controls muted playsinline height="100%">
+            <source src="./static/videos/dog_imitation_dataset.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+      
+      <div class="column has-text-centered">
+        <h4 class="title is-4">Methods comparison</h4>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" controls muted playsinline height="100%">
+              <source src="./static/videos/dog_imitation_comparison.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-three-fifths has-text-centered">  
+        <h4 class="title is-4">Other examples</h4>
+        <video id="matting-video" controls muted playsinline height="25%">
+          <source src="./static/videos/dog_imitation_other.mp4"
+                type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <!--/ Solo dog_imitation -->
+
+  <!-- H1 synthetic -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-full-width">  
+      <h3 class="title is-3">H1 synthetic</h3>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">  
+      <div class="column has-text-centered">
+        <div class="content">
+          <h4 class="title is-4">Dataset</h4>
+          <video id="dollyzoom" controls muted playsinline height="100%">
+            <source src="./static/videos/H1_synthetic_dataset.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+      
+      <div class="column has-text-centered">
+        <h4 class="title is-4">Methods comparison</h4>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" controls muted playsinline height="100%">
+              <source src="./static/videos/H1_synthetic_comparison.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ H1 synthetic -->
+
+
 </section>
 
 <section class="section" id="BibTeX">
