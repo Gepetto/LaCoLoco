@@ -1,0 +1,10 @@
+motions:
+  - obs_file: "walking7_obs_dataset.npy"
+    states_file: "walking7_states_dataset.npy"
+    weight: 1.0
+    dt: 0.02
+  
+  - obs_file: "manipulation_obs_dataset.npy"
+    states_file: "manipulation_states_dataset.npy"
+    weight: 4.0
+    dt: 0.02

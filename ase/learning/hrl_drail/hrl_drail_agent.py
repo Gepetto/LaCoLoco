@@ -1,0 +1,58 @@
+# Copyright (c) 2018-2022, NVIDIA Corporation
+# Copyright (c) 2025, LAAS-CNRS
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#
+# 1. Redistributions of source code must retain the above copyright notice, this
+#    list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice,
+#    this list of conditions and the following disclaimer in the documentation
+#    and/or other materials provided with the distribution.
+#
+# 3. Neither the name of the copyright holder nor the names of its
+#    contributors may be used to endorse or promote products derived from
+#    this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# based on https://github.com/nv-tlabs/ASE
+
+from omni.isaac.lab.utils.assets import retrieve_file_path
+
+import learning.common_hrl.common_hrl_agent as common_hrl_agent
+import learning.common_ase.common_ase_models as common_ase_models
+
+import learning.ase_drail.ase_drail_agent as ase_drail_agent
+import learning.ase_drail.ase_drail_network_builder as ase_drail_network_builder
+
+
+class HRLAgent(common_hrl_agent.CommonHRLAgent):
+    def _build_llc(self, config_params, checkpoint_file):
+        network_params = config_params["network"]
+        network_builder = ase_drail_network_builder.ASEDRAILBuilder()
+        network_builder.load(network_params)
+
+        network = common_ase_models.CommonModelASEContinuous(network_builder)
+        llc_agent_config = self._build_llc_agent_config(config_params, network)
+
+        self._llc_agent = ase_drail_agent.ASEDRAILAgent("llc", llc_agent_config)
+
+        checkpoint_file = retrieve_file_path(checkpoint_file)
+        self._llc_agent.restore(checkpoint_file)
+        print("Loaded LLC checkpoint from {:s}".format(checkpoint_file))
+        self._llc_agent.set_eval()
+
+        self._llc_agent.writer = self.writer
+        # log only info from llc, otherwise it clashes when plotting
+        self.writer = None

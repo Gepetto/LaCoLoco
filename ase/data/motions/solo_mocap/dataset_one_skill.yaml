@@ -1,0 +1,7 @@
+motions:
+- obs_file: D1_031_KAN01_001_obs.npy
+  states_file: D1_031_KAN01_001_state.npy
+  weight: 1.0
+  starting_id: 500
+  ending_id: 700
+  dt: 0.01666

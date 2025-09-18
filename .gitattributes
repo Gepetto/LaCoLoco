@@ -1,0 +1,2 @@
+ase/data/motions/solo_mocap/**.npy filter=lfs diff=lfs merge=lfs -text
+ase/data/networks/**.pth filter=lfs diff=lfs merge=lfs -text

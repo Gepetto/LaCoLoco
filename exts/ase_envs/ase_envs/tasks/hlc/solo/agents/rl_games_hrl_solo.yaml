@@ -1,0 +1,98 @@
+params:
+  seed: 42
+
+  algo:
+    name: hrl
+
+  model:
+    name: hrl
+
+  network:
+    device_name: 'cuda:0'
+
+    name: hrl
+    separate: True
+
+    space:
+      continuous:
+        mu_activation: None
+        sigma_activation: None
+        mu_init:
+          name: default
+        sigma_init:
+          name: const_initializer
+          val: -2.3
+        fixed_sigma: True
+        sigma_grad: True
+
+    mlp:
+      units: [1024, 512]
+      activation: relu
+      d2rl: False
+
+      initializer:
+        name: default
+      regularizer:
+        name: None
+        
+  load_checkpoint: False
+  load_path: ''
+
+  config:
+    env_name: rlgpu
+    device: 'cuda:0'
+    device_name: 'cuda:0'
+    multi_gpu: False
+
+    max_epochs: 2000
+    save_best_after: 100
+    save_frequency: 100
+    save_intermediate: True
+    save_intermediate_freq: 500
+
+    ppo: True
+    mixed_precision: False
+    normalize_input: True
+    normalize_value: True
+    value_bootstrap: True
+    num_actors: -1  # configured from the script (based on num_envs)
+    reward_shaper:
+      scale_value: 1.0
+    normalize_advantage: True
+    gamma: 0.99
+    tau: 0.95
+    learning_rate: 2e-5
+    lr_schedule: constant
+    schedule_type: legacy
+    kl_threshold: 0.008
+    grad_norm: 1.0
+    entropy_coef: 0.0
+    truncate_grads: False
+    e_clip: 0.2
+    horizon_length: 32
+    minibatch_size: 16384
+    mini_epochs: 6
+    critic_coef: 5
+    clip_value: False
+    bounds_loss_coef: 0.0
+    bound_loss_type: bound
+    
+    task_reward_w: 1.0
+    disc_reward_w: 0.0
+
+    llc_steps: 5
+    llc_config: exts/ase_envs/ase_envs/tasks/hlc/solo/agents/rl_games_ase_hrl_solo.yaml
+    
+    task_obs_size: 3
+    llc_action_size: 12
+    command_name: ee_pose
+
+    print_stats: True
+
+    clip_actions: False
+
+    player:
+      games_num: 1
+      max_steps: 100
+      save_metric_logs: True
+

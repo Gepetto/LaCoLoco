@@ -1,0 +1,345 @@
+dataset_version: "v4"
+motions:
+  # in the first ones not much happening
+  # - obs_file: "D1_001_KAN01_001_obs.npy"
+  #   states_file: "D1_001_KAN01_001_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  # - obs_file: "D1_003_KAN01_001_obs.npy"
+  #   states_file: "D1_003_KAN01_001_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  # - obs_file: "D1_004_KAN01_001_obs.npy"
+    # states_file: "D1_004_KAN01_001_state.npy"
+    # weight: 1.0
+    # dt: 0.01666
+
+  # - obs_file: "D1_005_KAN01_001_obs.npy"
+  #   states_file: "D1_005_KAN01_001_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  # - obs_file: "D1_006_KAN01_001_obs.npy"
+  #   states_file: "D1_006_KAN01_001_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  # - obs_file: "D1_006_KAN01_002_obs.npy"
+  #   states_file: "D1_006_KAN01_002_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  - obs_file: "D1_007_KAN01_001_obs.npy"
+    states_file: "D1_007_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_031_KAN01_001_obs.npy"
+    states_file: "D1_031_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 8.5
+    # ending_time_s: 16.0
+    starting_id: 511
+    ending_id: 960
+
+  - obs_file: "D1_071_KAN02_002_obs.npy"
+    states_file: "D1_071_KAN02_002_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 0.0
+    # ending_time_s: 6.0
+    starting_id: 0
+    ending_id: 360
+
+  - obs_file: "D1_045_KAN01_001_obs.npy"
+    states_file: "D1_045_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 3.0
+    # ending_time_s: 8.0
+    starting_id: 181
+    ending_id: 480
+
+  - obs_file: "D1_073_KAN02_002_obs.npy"
+    states_file: "D1_073_KAN02_002_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_047_KAN01_001_obs.npy"
+    states_file: "D1_047_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 4.5
+    # ending_time_s: 16.0
+    starting_id: 271
+    ending_id: 960
+
+  - obs_file: "D1_086_KAN02_001_obs.npy"
+    states_file: "D1_086_KAN02_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_047z_KAN01_002_obs.npy"
+    states_file: "D1_047z_KAN01_002_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_ex01_KAN01_001_obs.npy"
+    states_file: "D1_ex01_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_047z_KAN01_003_obs.npy"
+    states_file: "D1_047z_KAN01_003_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_ex02_KAN02_001_obs.npy"
+    states_file: "D1_ex02_KAN02_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 67.0
+    # ending_time_s: 84.0
+    starting_id: 4022
+    ending_id: 5042
+
+  - obs_file: "D1_047z_KAN01_004_obs.npy"
+    states_file: "D1_047z_KAN01_004_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_ex03_KAN02_001_obs.npy"
+    states_file: "D1_ex03_KAN02_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 12.0
+    # ending_time_s: 44.0
+    starting_id: 720
+    ending_id: 2641
+
+  - obs_file: "D1_047z_KAN01_005_obs.npy"
+    states_file: "D1_047z_KAN01_005_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_ex03_KAN02_003_obs.npy"
+    states_file: "D1_ex03_KAN02_003_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 21.0
+    # ending_time_s: 50.0
+    starting_id: 1261
+    ending_id: 3001
+
+  - obs_file: "D1_008_KAN01_001_obs.npy"
+    states_file: "D1_008_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 5.0
+    # ending_time_s: 21.0
+    starting_id: 301
+    ending_id: 1260
+
+  - obs_file: "D1_049_KAN01_001_obs.npy"
+    states_file: "D1_049_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 4.0
+    # ending_time_s: 13.0
+    starting_id: 241
+    ending_id: 780
+
+  - obs_file: "D1_ex03_KAN02_006_obs.npy"
+    states_file: "D1_ex03_KAN02_006_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 47.0
+    # ending_time_s: 66.0
+    starting_id: 2822
+    ending_id: 3961
+
+  - obs_file: "D1_008_KAN01_002_obs.npy"
+    states_file: "D1_008_KAN01_002_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 6.0
+    # ending_time_s: 18.0
+    starting_id: 361
+    ending_id: 1080
+
+  - obs_file: "D1_053_KAN01_001_obs.npy"
+    states_file: "D1_053_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_ex03_KAN02_012_obs.npy"
+    states_file: "D1_ex03_KAN02_012_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_009_KAN01_001_obs.npy"
+    states_file: "D1_009_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_053_KAN01_002_obs.npy"
+    states_file: "D1_053_KAN01_002_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_ex03_KAN02_013_obs.npy"
+    states_file: "D1_ex03_KAN02_013_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_009_KAN01_002_obs.npy"
+    states_file: "D1_009_KAN01_002_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_055_KAN01_001_obs.npy"
+    states_file: "D1_055_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 0.0
+    # ending_time_s: 20.0
+    starting_id: 0
+    ending_id: 1200
+
+  - obs_file: "D1_ex03_KAN02_014_obs.npy"
+    states_file: "D1_ex03_KAN02_014_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 0.0
+    # ending_time_s: 43.0
+    starting_id: 0
+    ending_id: 2581
+
+  - obs_file: "D1_010_KAN01_001_obs.npy"
+    states_file: "D1_010_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 7.0
+    # ending_time_s: 11.0
+    starting_id: 421
+    ending_id: 660
+
+  - obs_file: "D1_057_KAN01_001_obs.npy"
+    states_file: "D1_057_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 17.0
+    # ending_time_s: 23.0
+    starting_id: 1021
+    ending_id: 1380
+
+  # - obs_file: "D1_ex04_KAN02_001_obs.npy"
+  #   states_file: "D1_ex04_KAN02_001_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  - obs_file: "D1_010_KAN01_002_obs.npy"
+    states_file: "D1_010_KAN01_002_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_058_KAN01_001_obs.npy"
+    states_file: "D1_058_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 3.0
+    # ending_time_s: 16.0
+    starting_id: 181
+    ending_id: 960
+
+  # - obs_file: "D1_ex04_KAN02_002_obs.npy"
+  #   states_file: "D1_ex04_KAN02_002_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  - obs_file: "D1_010_KAN01_003_obs.npy"
+    states_file: "D1_010_KAN01_003_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_059_KAN01_001_obs.npy"
+    states_file: "D1_059_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 6.0
+    # ending_time_s: 10.0
+    starting_id: 361
+    ending_id: 600
+
+  # - obs_file: "D1_ex04_KAN02_003_obs.npy"
+  #   states_file: "D1_ex04_KAN02_003_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  - obs_file: "D1_010_KAN01_004_obs.npy"
+    states_file: "D1_010_KAN01_004_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  - obs_file: "D1_061_KAN01_001_obs.npy"
+    states_file: "D1_061_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: ~23
+    # ending_time_s: 3m05s
+    starting_id: 1380
+    ending_id: 11104
+
+  - obs_file: "D1_ex04_KAN02_004_obs.npy"
+    states_file: "D1_ex04_KAN02_004_state.npy"
+    weight: 1.0
+    dt: 0.01666
+
+  # - obs_file: "D1_013_KAN01_001_obs.npy"
+  #   states_file: "D1_013_KAN01_001_state.npy"
+  #   weight: 1.0
+  #   dt: 0.01666
+
+  - obs_file: "D1_061z_KAN01_002_obs.npy"
+    states_file: "D1_061z_KAN01_002_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 21.0
+    # ending_time_s: 31.0
+    starting_id: 1261
+    ending_id: 1860
+
+  - obs_file: "D1_ex05_KAN02_001_obs.npy"
+    states_file: "D1_ex05_KAN02_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 0.0
+    # ending_time_s: 157.0
+    starting_id: 0
+    ending_id: 9423
+
+  - obs_file: "D1_025_KAN01_001_obs.npy"
+    states_file: "D1_025_KAN01_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 3.0
+    # ending_time_s: 11.0
+    starting_id: 181
+    ending_id: 660
+
+  - obs_file: "D1_061z_KAN01_003_obs.npy"
+    states_file: "D1_061z_KAN01_003_state.npy"
+    weight: 1.0
+    dt: 0.01666
+    # starting_time_s: 0.0 
+    # ending_time_s: 24.0
+    starting_id: 0
+    ending_id: 1440
+
+  - obs_file: "D1_ex06_KAN02_001_obs.npy"
+    states_file: "D1_ex06_KAN02_001_state.npy"
+    weight: 1.0
+    dt: 0.01666
