@@ -64,6 +64,7 @@ python ase/run.py --task {TASK_NAME}-HRL-{METHOD_NAME} --motion_file {DATASET_NA
 
 This work was based on [ASE](https://github.com/nv-tlabs/ASE), [DRAIL](https://github.com/NVlabs/DRAIL), [CaT](https://github.com/Gepetto/constraints-as-terminations) and [IsaacLab](https://github.com/isaac-sim/IsaacLab).
 
+This research was supported by ANITI IA Cluster project 23-IACL-0002 and ANR-19-PI3A-0004. This work was granted access to the HPC resources of IDRIS under the allocation 2025-AD011016368 made by GENCI.
 
 ## Citation
 
